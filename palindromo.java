@@ -29,8 +29,7 @@ public void palabras(){
 
     //Convirtiendo a minúsculas y quitando espacios
 
-    cadena=cadena.toLowerCase().replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o")
-    .replace("ú", "u").replace(" ", "").replace(".", "").replace(",", "");
+    cadena=cadena.toLowerCase().replace(" ", "");
 
     System.out.println(cadena.getClass().getSimpleName());
 
@@ -49,7 +48,7 @@ public  void inversa(){
     System.out.println(reversa.getClass().getSimpleName());
     
 
-    if (cadena==reversa) {
+    if (cadena.equals(reversa)) {
 
         System.out.println("la palabra o frase que ingresaste es un palíndromo");
         
@@ -61,3 +60,14 @@ public  void inversa(){
 }
     
 }
+
+
+/**En el método inversa utilicé la clase StringBuilder y creando el objeto rev para poder separar los elementos del String en caracteres
+ * ésto es en lugar de utilizar un for ya que ésto me permite que también se tenga un index y así poderle pasar a la variable cvadena como
+ * parámetro para poder hacer esto.
+ * reversa que es mi segunda variable, está igualada a rev que en éste caso es mi objeto poder recorrer de derecha a izquierda
+ * y con el método .tostring poder unir nuevamente esa cadena de caracteres en un string para poder comparar con el if si son o no iguales
+ * 
+ * En el if valide con .equals ya que es una validación de tipo boolen porque valida el lugar que se ocupa en la memoria en caso de 
+ * ser de tipo string y comprar cadena con reversa
+ */
